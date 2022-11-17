@@ -7,23 +7,22 @@ const NavBar = () => {
   return (
     <>
       <div>
-        <Nav className="navbar navbar-dark bg-warning">
-          <div className="container">
+        <Nav variant="pills" className="navbar bg-primary">
+          <div className="container justify-content-start" defaulActiveKey="/home">
             <Navbar.Brand to="/">Mundo BMW</Navbar.Brand>
-
-            <Link to="/" className="btn btn-outline-primary">
+            <Link to="/" className="btn btn-outline-dark sm">
               Home
             </Link>
-            <Link to="/category/motores" className="btn btn-outline-primary">
+            <Link to="/category/motores" className="btn btn-outline-dark">
               Motores
             </Link>
-            <Link to="/category/transmisiones" className="btn btn-outline-primary">
+            <Link to="/category/transmisiones" className="btn btn-outline-dark">
               Transmisiones
             </Link>
-            <Link to="/category/turbos" className="btn btn-outline-primary">
+            <Link to="/category/turbos" className="btn btn-outline-dark">
               Turbos
             </Link>
-            <Link to="/cart">
+            <Link to="/cart" className="btn btn-outline-dark">
               <CartWidget />
             </Link>
           </div>
