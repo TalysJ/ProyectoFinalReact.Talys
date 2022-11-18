@@ -85,13 +85,12 @@ const Cart = () => {
             </Card>
           </div>
         ))}
-        <br></br>
 
         <Table striped bordered hover size="dark">
           <thead>
             <tr>
               <th>
-                <font color="white">Valor total compra:</font>{" "}
+                <font color="white">Valor total compra:</font>
               </th>
               <th>
                 <font color="white"> $ {totalPrice()}</font>
@@ -107,31 +106,33 @@ const Cart = () => {
         </h1>
         <p>
           <font color="white">
-            Llena los campos completar la compra
+            Ingresa tus datos para completar la compra
           </font>
         </p>
         <input
           type="text"
+          id="name"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          placeholder="Tu nombre..."
+          placeholder="Nombre"
         />
         <input
-          type="text"
+          type="email"
+          id="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          placeholder="Tu email..."
+          placeholder="Email"
         />
         <input
-          type="text"
+          type="number"
+          id="number"
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
-          placeholder="Tu teléfono..."
+          placeholder="Teléfono"
         />
-        <Button onClick={handleClick}>EMITIR COMPRA</Button>
+        <Button onClick={handleClick}>Realizar compra</Button>
         <Button
-          className="btn btn-red"
-          variant="primary"
+          variant="danger"
           onClick={() => clearItems()}
         >
           Vaciar carrito
@@ -147,7 +148,7 @@ const Cart = () => {
           </p>
           <p>
             <font color="white">
-              En las proximas 24 horas, nos pondremos en contacto para gestionar el pago y envío!
+              En un plazo de 24 horas, nos contactaremos con usted para gestionar el pago y realizar el envío
             </font>
           </p>
         </div>
